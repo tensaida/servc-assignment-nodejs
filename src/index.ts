@@ -16,6 +16,20 @@ class Message {
   text!: string
 }
 
+@Entity() 
+export default class Book {
+  @Column()
+  uuid!: string;
+  @Column()
+  name!: string;
+  @Column()
+  isbn!: string;
+  @Column()
+  author!: string;
+  @Column()
+  releaseDate!: Date;
+}
+
 const PORT = 3000;
 const root = path.resolve(__dirname, "..")
 const dbOptions: DataSourceOptions = {
