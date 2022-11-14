@@ -1,8 +1,6 @@
-import Book from '../model/Book';
-import Message from '../model/Message';
-import db from './connection';
+import Book from '../entity/Book';
+import db from './data-source';
 
 const bookRepository = db.getRepository(Book);
-const messageRepository = db.getRepository(Message);
 
-export { bookRepository, messageRepository };
+export { bookRepository };
